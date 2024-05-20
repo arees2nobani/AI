@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit Recognition</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Fruit Recognition Using Neural Network</h1>
+
+  <div id="inputForm">
+    <h2>Enter Fruit Data</h2>
+    <form id="fruitForm">
+      <label for="sweetness">Sweetness (1-10):</label>
+      <input type="number" id="sweetness" name="sweetness" min="1" max="10" required>
+
+      <label for="color">Color:</label>
+      <input type="text" id="color" name="color" required>
+
+      <label for="fruit">Fruit:</label>
+      <select id="fruit" name="fruit" required>
+        <option value="Apple">Apple</option>
+        <option value="Banana">Banana</option>
+        <option value="Orange">Orange</option>
+      </select>
+
+      <button type="button" onclick="addData()">Add Data</button>
+    </form>
+  </div>
+
+  <div id="nnConfig">
+    <h2>Neural Network Configuration</h2>
+    <form id="nnForm">
+      <label for="hiddenNeurons">Number of Neurons in Hidden Layer:</label>
+      <input type="number" id="hiddenNeurons" name="hiddenNeurons" min="1" required>
+
+      <label for="activationFunction">Activation Function:</label>
+      <select id="activationFunction" name="activationFunction" required>
+        <option value="sigmoid">Sigmoid</option>
+        <!-- Add other activation functions as needed -->
+      </select>
+
+      <label for="learningRate">Learning Rate:</label>
+      <input type="number" id="learningRate" name="learningRate" min="0.01" max="1" step="0.01" required>
+
+      <label for="maxEpochs">Maximum Number of Epochs:</label>
+      <input type="number" id="maxEpochs" name="maxEpochs" min="1" required>
+
+      <label for="goal">Goal:</label>
+      <input type="number" id="goal" name="goal" min="0" max="1" step="0.01" required>
+
+      <button type="button" onclick="trainModel()">Train Model</button>
+    </form>
+  </div>
+
+  <div id="performance">
+    <h2>System Performance</h2>
+    <p id="accuracy">Accuracy: 0%</p>
+  </div>
+
+  <div id="testModel">
+    <h2>Test Model</h2>
+    <form id="testForm">
+      <label for="testSweetness">Sweetness (1-10):</label>
+      <input type="number" id="testSweetness" name="testSweetness" min="1" max="10" required>
+
+      <label for="testColor">Color:</label>
+      <input type="text" id="testColor" name="testColor" required>
+
+      <button type="button" onclick="testModel()">Test Model</button>
+    </form>
+    <p id="testResult"></p>
+  </div>
+
+  <script src="neuralNetwork.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

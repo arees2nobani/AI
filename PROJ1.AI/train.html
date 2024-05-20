@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Fruit Recognition System.. Train</title>
+    <script src="https://cdn.jsdelivr.net/npm/synaptic/dist/synaptic.js"></script>
+</head>
+<body>
+    <div class="div1">
+        <h1>Train Mode</h1>
+
+        <div>
+            <label for="sweetness">Sweetness:</label>
+            <input type="number" id="sweetness" placeholder="Enter Num between 1-10">
+        </div>
+
+        <div>
+            <label for="color">Color:</label>
+            <select id="color">
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="orange">Orange</option>
+                
+            </select>
+        </div>
+
+        <div>
+            <label for="fruit">Fruit:</label>
+            <select id="fruit">
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="orange">Orange</option>
+            </select>
+        </div>
+
+        <button onclick="Train()">Train</button>
+        <button onclick="Back()">Back</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/synaptic/dist/synaptic.js"></script>
+    <script src="train.js"></script>
+</body>
+</html>
